@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://gsvidal.github.io/openAI-GPT-text-answers-generator-app",
+  "homepage": "https://gsvidal.github.io/openAI-GPT-text-answers-generator-app/",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "deploy": "parcel build src/index.html && gh-pages -d dist"
+    "pre-deploy": "parcel build src/index.html --public-url /openAI-GPT-text-answers-generator-app",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Gonzalo Vidal",
