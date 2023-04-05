@@ -6152,6 +6152,7 @@ var generateText = /*#__PURE__*/function () {
           });
         case 12:
           response = _context.sent;
+          console.log(response);
           loaderToggle();
           generatedText = response.data.choices[0].text;
           if (ouputContainer.lastElementChild.classList.contains('output')) {
@@ -6161,17 +6162,17 @@ var generateText = /*#__PURE__*/function () {
           ouputContainer.insertAdjacentElement('beforeend', outputElement);
           outputElement.classList.add('output');
           outputElement.textContent = generatedText;
-          _context.next = 25;
+          _context.next = 26;
           break;
-        case 22:
-          _context.prev = 22;
+        case 23:
+          _context.prev = 23;
           _context.t0 = _context["catch"](7);
           console.error(_context.t0);
-        case 25:
+        case 26:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[7, 22]]);
+    }, _callee, null, [[7, 23]]);
   }));
   return function generateText() {
     return _ref.apply(this, arguments);
