@@ -6115,7 +6115,8 @@ var generateTextButton = document.getElementById('generate-button');
 var inputText = document.getElementById('prompt');
 var ouputContainer = document.getElementById('output-container');
 var loader = document.querySelector('.loader');
-var apiKey = "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";
+var apiKey = "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";
+console.log(apiKey);
 loader.classList.add('off');
 var generateText = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -6213,7 +6214,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60474" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62058" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
