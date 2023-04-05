@@ -1,11 +1,10 @@
 import axios from 'axios';
+require('dotenv').config();
 
 const generateTextButton = document.getElementById('generate-button');
 const inputText = document.getElementById('prompt');
 const ouputContainer = document.getElementById('output-container');
 const loader = document.querySelector('.loader');
-
-require('dotenv').config();
 
 const apiKey = process.env.API_KEY;
 
@@ -43,6 +42,7 @@ const generateText = async () => {
     const response = await axios.post(apiUrl, params, {
       headers,
     });
+    console.log(response);
     loaderToggle();
 
     const generatedText = response.data.choices[0].text;
@@ -67,7 +67,7 @@ const generateTextAfterClick = () => {
 };
 
 const generateTextAfterKeyPressed = (event) => {
-  if (inputText.value.length > 0 && event.key === "Enter") {
+  if (inputText.value.length > 0 && event.key === 'Enter') {
     generateText();
   }
 };
