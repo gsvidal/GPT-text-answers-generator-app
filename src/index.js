@@ -5,9 +5,11 @@ const inputText = document.getElementById('prompt');
 const ouputContainer = document.getElementById('output-container');
 const loader = document.querySelector('.loader');
 
-loader.classList.add('off');
+require('dotenv').config();
 
-const API_KEY = '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';
+const apiKey = process.env.API_KEY;
+
+loader.classList.add('off');
 
 const generateText = async () => {
   const prompt = inputText.value;
@@ -26,7 +28,7 @@ const generateText = async () => {
 
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: `Bearer ${API_KEY}`,
+    Authorization: `Bearer ${apiKey}`,
   };
 
   const loaderToggle = () => {
