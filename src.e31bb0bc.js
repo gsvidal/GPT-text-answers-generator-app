@@ -6117,6 +6117,7 @@ var ouputContainer = document.getElementById('output-container');
 var loader = document.querySelector('.loader');
 var apiKey = "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";
 console.log(apiKey);
+console.log("WI");
 loader.classList.add('off');
 var generateText = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
